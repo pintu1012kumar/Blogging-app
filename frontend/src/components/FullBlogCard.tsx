@@ -18,7 +18,7 @@ const FullBlogCard = ({
     return <>
         <div className="grid grid-cols-12 px-36 pt-20 pb-20 h-screen">
             <div className="col-span-8">
-                <div className=" pr-10 text-4xl font-extrabold font-sans">
+                <div className=" pr-10 text-4xl font-extrabold font-sans ">
                     {title}
                 </div>
                 <div className="mt-2 text-slate-600">
