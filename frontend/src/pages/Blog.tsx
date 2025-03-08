@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { useBlog } from "../hooks"
+import { useBlog } from "../hooks/index"
 import Appbar from "../components/Appbar";
 import { Skeleton_BlogPage } from "../components/Skeleton";
 import { FullBlogCard } from "../components/FullBlogCard";

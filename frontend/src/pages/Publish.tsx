@@ -38,7 +38,7 @@ function TextEditor() {
                 return;
             }
 
-            const res = await axios.post(`${BACKEND_URL}/api/v1/blogs`, postInputs, {
+            const res = await axios.post(`${BACKEND_URL}/api/v1/blogs/blog`, postInputs, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
