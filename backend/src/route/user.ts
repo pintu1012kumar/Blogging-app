@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 import jwt from "jsonwebtoken";
 import bodyParser from "body-parser";
 import bcrypt from "bcrypt";
-import { signinInput, signupInput } from "../../../common/src/index";
+import { signinInput, signupInput } from "@pintu1012kumar/medium-common";
 
 dotenv.config();
 

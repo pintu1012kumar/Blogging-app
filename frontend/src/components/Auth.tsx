@@ -1,6 +1,6 @@
 
 
-import { SignupInput} from "../../../common/src/index";
+import { SignupInput} from "@pintu1012kumar/medium-common";
 import axios from "axios";
 import { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";

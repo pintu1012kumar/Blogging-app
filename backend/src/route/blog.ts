@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 import { PrismaClient } from "@prisma/client";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import dotenv from "dotenv";
-import { createPostInput, updatePostInput } from "../../../common/src/index";
+import { createPostInput, updatePostInput } from "@pintu1012kumar/medium-common";
 
 dotenv.config();
 
