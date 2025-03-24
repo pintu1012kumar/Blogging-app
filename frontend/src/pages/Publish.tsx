@@ -3,7 +3,7 @@ import Appbar from "../components/Appbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../config";
-import { CreatePostType } from "../../../common";
+import { CreatePostType } from "../../../common/src";
 
 const Publish = () => {
     return (
@@ -38,7 +38,7 @@ function TextEditor() {
                 return;
             }
 
-            const res = await axios.post(`${BACKEND_URL}/api/v1/blogs/blog`, postInputs, {
+            const res = await axios.post(`${BACKEND_URL}/api/v1/blog/`, postInputs, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

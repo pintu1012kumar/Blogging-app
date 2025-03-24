@@ -1,19 +1,26 @@
-import { Hono } from 'hono';
-import { userRouter } from './routes/user';
-import { blogRouter } from './routes/blog';
-import { cors } from "hono/cors";
-
-export const app = new Hono<{
-  Bindings: {
-    DATABASE_URL: string;
-    JWT_SECRET: string;
-  };
-}>();
-
-app.use("/*", cors());
-app.route('/api/v1/user', userRouter);
-app.route('/api/v1/blogs', blogRouter);
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import useRouter from "./route/user";
+import blogRouter from "./route/blog";
 
 
+dotenv.config();
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-export default app;
+
+app.use(cors());
+app.use(express.json());
+
+
+app.get("/", (req, res) => {
+    res.send("Hello, World!");
+  });
+
+app.use("/api/v1/user", useRouter);
+app.use("/api/v1/blog", blogRouter);
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});

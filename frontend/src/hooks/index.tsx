@@ -33,7 +33,7 @@ const useBlogs = () => {
                     return;
                 }
                 
-                const response = await axios.get(`${BACKEND_URL}/api/v1/blogs/blog/bulk`, {
+                const response = await axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`, 
                     },
@@ -84,7 +84,7 @@ const useBlog = ({id}:{id:string}) => {
                     return;
                 }
                 
-                const response = await axios.get(`${BACKEND_URL}/api/v1/blogs/blog/${id}`, {
+                const response = await axios.get(`${BACKEND_URL}/api/v1/blog/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`, 
                     },
