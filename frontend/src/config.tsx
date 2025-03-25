@@ -1,2 +1,1 @@
-// export const BACKEND_URL = "https://medium.pintu1012kumar.workers.dev";
-export const BACKEND_URL = "http://localhost:5000";
+export const BACKEND_URL = "https://blogging-app-3x8j.onrender.com";
