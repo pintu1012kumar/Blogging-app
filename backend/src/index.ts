@@ -22,5 +22,5 @@ app.use("/api/v1/user", useRouter);
 app.use("/api/v1/blog", blogRouter);
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

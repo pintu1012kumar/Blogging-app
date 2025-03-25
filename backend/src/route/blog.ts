@@ -14,7 +14,7 @@ interface AuthRequest extends Request {
   userId: string;
 }
 
-// Middleware for authentication
+// Middleware
 const authenticate = (req: AuthRequest, res: Response, next: NextFunction) => {
   try {
     const authHeader = req.header("Authorization");
@@ -36,8 +36,8 @@ const authenticate = (req: AuthRequest, res: Response, next: NextFunction) => {
   }
 };
 
-// Create a new blog post
-// @ts-ignore
+// Create post
+//  @ts-ignore
 blogRouter.post("/", authenticate, async (req: AuthRequest, res: Response) => {
   try {
     const { success } = createPostInput.safeParse(req.body);
@@ -60,7 +60,7 @@ blogRouter.post("/", authenticate, async (req: AuthRequest, res: Response) => {
   }
 });
 
-// Update a blog post
+// Update post
 // @ts-ignore
 blogRouter.put("/", authenticate, async (req: AuthRequest, res: Response) => {
   try {
@@ -83,7 +83,7 @@ blogRouter.put("/", authenticate, async (req: AuthRequest, res: Response) => {
   }
 });
 
-// Get all blog posts
+// Get all  posts
 // @ts-ignore
 blogRouter.get("/bulk", async (req: Request, res: Response) => {
   try {
