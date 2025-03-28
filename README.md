@@ -1,6 +1,6 @@
 # Blogging-app
 
-A Medium-like blogging platform built with Express, React, Prisma, Typescript, Postgres and Zod.
+A Medium-like blogging platform built with Express, React, Prisma, Typescript, Postgres and Zod(validation).
 
 git clone (https://github.com/pintu1012kumar/Blogging-app.git)  
 cd frontend  
